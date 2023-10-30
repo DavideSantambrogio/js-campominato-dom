@@ -22,12 +22,12 @@ Quando L'utente clicca su ogni cella, la cella cliccata sì colora di azzurro.
 
 - []AL click sulla cella della griglia
     - [X] leggo il numero cliccato
-    - [] SE il numero cliccato è nell'array di bombe
-        [] la cella diventa rossa
-        [] fine gioco --> utente perde
+    - [X] SE il numero cliccato è nell'array di bombe
+        [X] la cella diventa rossa
+        [X] fine gioco --> utente perde
 
     - [] ALTRIMENTI
-        - [] la cella diventa azzurra
+        - [X] la cella diventa azzurra
         - [] SE questo numero non è stato già cliccato precedentemente
             - [] aggiungere il numero alt'array di numeri “non bombe" cliccati
         - [] SE la lunghezza dell'array di "non bombe" è uguale al numero massimo di

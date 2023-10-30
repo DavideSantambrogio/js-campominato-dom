@@ -40,11 +40,16 @@ function createGridCell (innerNumber) {
 
 
 // cambia colore
-function handleCellClick() {
-    this.classList.add("active")
-    const clickedNumber = this.textContent
-    console.log(clickedNumber)
+function handleCellClick() {   
+    let clickedNumber = parseInt(this.textContent)    
     // logica del gioco
+    if (bombsList.includes(clickedNumber)) {
+        this.classList.add("red")
+        document.getElementById("lose").style.display = "flex";
+    }
+    else {
+         this.classList.add("active")
+    }
 }
 
 // genera numeri random
@@ -66,4 +71,8 @@ function generateBombs(max) {
     
 }
 
+// ricomincia
+document.getElementById("refresh").addEventListener("click", function(){
+    location.reload();
+});
 
