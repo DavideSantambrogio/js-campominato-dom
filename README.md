@@ -8,9 +8,9 @@ Quando L'utente clicca su ogni cella, la cella cliccata sì colora di azzurro.
 
 ##4 Svolgimento
 - [X] Quanto utente clicca PLAY:
-    - [] Generare 16 bombe: array di 16 numerì casuali non duplicati compresì nel range del
-    gioco (1 a 100 / 81 / 49)
-    - [] definire il numero massimo di tentativi consentiti: 100 - 16
+    - [X] Generare 16 bombe: array di 16 numerì casuali non duplicati compresi nel range del
+    gioco (1 a 100)
+    - [X] definire il numero massimo di tentativi consentiti: 100 - 16
     - [] array di numeri “non bombe" cliccate dall'utente per avere il punteggio    
     - [X] Ripulire la griglia precedente
     - [X] Mostrare la griglia
@@ -21,7 +21,7 @@ Quando L'utente clicca su ogni cella, la cella cliccata sì colora di azzurro.
             - [X] Aggiungere la cella alla griglia
 
 - []AL click sulla cella della griglia
-    - [] leggo il numero cliccato
+    - [X] leggo il numero cliccato
     - [] SE il numero cliccato è nell'array di bombe
         [] la cella diventa rossa
         [] fine gioco --> utente perde

@@ -1,5 +1,22 @@
+// const utili
+const maxCells = 100;
+const maxBombs = 16;
+const Score = maxCells - maxBombs;
+const bombsList = [];
+let score = 0;
+
+
+
+// programma
 document.getElementById("start").addEventListener("click", startGame);
 
+
+
+
+
+    
+
+// ***************funzioni******************
 
 // funzione principale
 function startGame(){
@@ -11,7 +28,18 @@ function startGame(){
         newCell.addEventListener("click" , handleCellClick)
         gridElem.append(newCell)
     }
+    
 }
+
+// genera bombe
+
+while (bombsList.length < 16) {
+      let randomNumber = Math.floor(Math.random() * 100) + 1;
+      if (!bombsList.includes(randomNumber)) {
+        bombsList.push(randomNumber);
+      }
+    }  
+    console.log (bombsList)
 
 // crea una cella
 function createGridCell (innerNumber) {
@@ -24,7 +52,9 @@ function createGridCell (innerNumber) {
 
 // cambia colore
 function handleCellClick() {
-    this.classList.add("active")
+    // this.classList.add("active")
     const clickedNumber = this.textContent
     console.log(clickedNumber)
+    return clickedNumber
 }
+
