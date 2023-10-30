@@ -12,10 +12,6 @@ document.getElementById("start").addEventListener("click", startGame);
 
 
 
-
-
-    
-
 // ***************funzioni******************
 
 // funzione principale
@@ -28,18 +24,7 @@ function startGame(){
         newCell.addEventListener("click" , handleCellClick)
         gridElem.append(newCell)
     }
-    
 }
-
-// genera bombe
-
-while (bombsList.length < 16) {
-      let randomNumber = Math.floor(Math.random() * 100) + 1;
-      if (!bombsList.includes(randomNumber)) {
-        bombsList.push(randomNumber);
-      }
-    }  
-    console.log (bombsList)
 
 // crea una cella
 function createGridCell (innerNumber) {
@@ -52,9 +37,28 @@ function createGridCell (innerNumber) {
 
 // cambia colore
 function handleCellClick() {
-    // this.classList.add("active")
+    this.classList.add("active")
     const clickedNumber = this.textContent
     console.log(clickedNumber)
-    return clickedNumber
 }
 
+// genera numeri random
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * ( max -  min
+    + 1)) + min
+}
+
+// genera bombe
+function generateBombs(max) {
+    const result = []
+    while (result.length < 16){
+        const rndNum = getRndInteger (1,max);
+    if(!result.includes(rndNum)) {
+        result.push(rndNum)
+    }
+    }
+    return result
+    
+}
+
+console.log (generateBombs(maxCells))
