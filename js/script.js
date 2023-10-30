@@ -2,15 +2,19 @@
 const maxCells = 100;
 const maxBombs = 16;
 const Score = maxCells - maxBombs;
-const bombsList = [];
 let score = 0;
+let clicked = []
 
 
 
 // programma
 document.getElementById("start").addEventListener("click", startGame);
 
+const bombsList = generateBombs(maxCells)
+console.log (bombsList)
 
+const maxClicks = maxCells - bombsList.length
+console.log (maxClicks)
 
 // ***************funzioni******************
 
@@ -40,6 +44,7 @@ function handleCellClick() {
     this.classList.add("active")
     const clickedNumber = this.textContent
     console.log(clickedNumber)
+    // logica del gioco
 }
 
 // genera numeri random
@@ -61,4 +66,4 @@ function generateBombs(max) {
     
 }
 
-console.log (generateBombs(maxCells))
+
