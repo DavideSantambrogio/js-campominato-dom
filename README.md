@@ -20,16 +20,16 @@ Quando L'utente clicca su ogni cella, la cella cliccata sì colora di azzurro.
             - [X] Aggiungere il click listener alla cella generata
             - [X] Aggiungere la cella alla griglia
 
-- []AL click sulla cella della griglia
+- [X]AL click sulla cella della griglia
     - [X] leggo il numero cliccato
     - [X] SE il numero cliccato è nell'array di bombe
-        [X] la cella diventa rossa
-        [X] fine gioco --> utente perde
+        - [X] la cella diventa rossa
+        - [X] fine gioco --> utente perde
 
     - [] ALTRIMENTI
         - [X] la cella diventa azzurra
-        - [] SE questo numero non è stato già cliccato precedentemente
-            - [] aggiungere il numero alt'array di numeri “non bombe" cliccati
-        - [] SE la lunghezza dell'array di "non bombe" è uguale al numero massimo di
+        - [X] SE questo numero non è stato già cliccato precedentemente
+            - [X] aggiungere il numero alt'array di numeri “non bombe" cliccati
+        - [X] SE la lunghezza dell'array di "non bombe" è uguale al numero massimo di
         tentativi
-            - [] fine gioco --> utente vince
+            - [X] fine gioco --> utente vince
