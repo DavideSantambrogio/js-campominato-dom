@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div class="wrapper">
         <div id="lose" class="hidden-lose">
+            <img src="img/boom-cat.gif" alt="">
             <h1>Hai perso <span class="score"></span></h1>
-            <button id="refresh">Riprova</button>
+            <button id="refresh">Gioca ancora</button>
         </div>
-        
+
         <div id="win" class="hidden-win">
-            <h1>Hai vinto</h1>
-            <button id="reload">Riprova</button>
+            <img src="img/boom-cat.gif" alt="">
+            <h1>Hai barato, nessuno ha mai vinto a questo gioco</h1>
+            <button id="reload">Gioca ancora</button>
         </div>
         <div class="container">
             <header>
@@ -23,21 +27,29 @@
                     <img src="img/logo.png" alt="">
                     <h1>Campo minato<span class="score"></span></h1>
                 </div>
-                <button id="start" type="button" >Play</button>
-            </header>
-            <main>
-              
-                <div id="grid" class="grid">
-                    <!-- <div class="cell active">1</div> -->                    
+                <div>
+                    <h3>Seleziona difficoltà</h3>
+                    <select id="modalita-gioco">
+                        <option value="facile">Facile</option>
+                        <option value="medio">Medio</option>
+                        <option value="difficile">Difficile</option>
+                        <option value="estremo">Estremo</option>
+                    </select>
                 </div>
 
+                <button id="start" type="button">Play</button>
+            </header>
+            <main>
+                <div id="grid" class="grid"></div>
             </main>
             <footer>
                 <p>Made with ♥ by <a href="">Boolean</a></p>
             </footer>
         </div>
     </div>
-    <script src="js/script.js" ></script>
-    
+    <script src="js/script.js"></script>
 </body>
+
 </html>
+
+<img src="img/lose.png" alt="">
